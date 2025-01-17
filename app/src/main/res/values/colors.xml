@@ -2,4 +2,25 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00000000</color>
+
+    <!-- main color -->
+    <color name="main">#FF8383</color>
+    <color name="sub1">#FFB0B0</color>
+    <color name="sub2">#FFF1EE</color>
+    <color name="yellow">#FFE893</color>
+
+    <!-- gray color -->
+    <color name="gray1">#F7F8FB</color>
+    <color name="gray2">#EFF1F5</color>
+    <color name="gray3">#E2E5EB</color>
+    <color name="gray4">#D2D6DE</color>
+    <color name="gray5">#A4ADBE</color>
+    <color name="gray6">#71788C</color>
+    <color name="gray7">#585E70</color>
+    <color name="gray8">#353C49</color>
+    <color name="gray9">#1C1E1F</color>
+
+    <!-- background color -->
+    <color name="background">#FAFAFE</color>
 </resources>
