@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.project.reday.UI.MainActivity
 import com.project.reday.R
+import com.project.reday.Utils.DateManager
 import com.project.reday.databinding.FragmentOnboardingTypeBinding
 
 class OnboardingTypeFragment : Fragment() {
@@ -40,6 +41,14 @@ class OnboardingTypeFragment : Fragment() {
             }
 
             buttonNext.setOnClickListener {
+                val dateManager = DateManager(mainActivity)
+
+                dateManager.saveType(selectedType)
+
+                mainActivity.supportFragmentManager.beginTransaction()
+                    .replace(R.id.fragmentContainerView_main, OnboardingFirstDayFragment())
+                    .addToBackStack(null)
+                    .commit()
             }
         }
 
