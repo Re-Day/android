@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_white_radius10">
+
+    <ImageView
+        android:id="@+id/imageView_bookmark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_bookmark" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView_anniversary_day"
+            style="@style/SubTitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="100일까지"
+            android:textColor="@color/gray9" />
+
+        <TextView
+            android:id="@+id/textView_dday"
+            style="@style/SubTitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="6dp"
+            android:background="@drawable/background_main_stroke"
+            android:fontFamily="@font/pretendard_semi_bold"
+            android:paddingHorizontal="14dp"
+            android:paddingVertical="6dp"
+            android:text="D-0"
+            android:textColor="@color/main"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView_anniversary_date"
+        style="@style/Caption2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2025.01.01 (금)"
+        android:textColor="@color/gray6"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"/>
+
+    <View
+        android:id="@+id/progress_background"
+        android:layout_width="0dp"
+        android:layout_height="13dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/background_gray2_radius10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textView_anniversary_date" />
+
+    <View
+        android:id="@+id/progress"
+        android:layout_width="200dp"
+        android:layout_height="13dp"
+        android:background="@drawable/background_sub1_radius10"
+        app:layout_constraintBottom_toBottomOf="@+id/progress_background"
+        app:layout_constraintEnd_toEndOf="@id/progress_background"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/progress_background"
+        app:layout_constraintTop_toTopOf="@+id/progress_background" />
+
+    <ImageView
+        android:id="@+id/progress_degree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/progress"
+        app:layout_constraintEnd_toEndOf="@+id/progress"
+        app:layout_constraintTop_toTopOf="@+id/progress"
+        app:srcCompat="@drawable/ic_degree" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
