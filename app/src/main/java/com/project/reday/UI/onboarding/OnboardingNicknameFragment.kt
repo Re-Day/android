@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.core.widget.addTextChangedListener
 import com.project.reday.UI.MainActivity
 import com.project.reday.R
+import com.project.reday.Utils.UserManager
 import com.project.reday.databinding.FragmentOnboardingNicknameBinding
 
 class OnboardingNicknameFragment : Fragment() {
@@ -32,6 +33,10 @@ class OnboardingNicknameFragment : Fragment() {
             }
 
             buttonNext.setOnClickListener {
+                val dateManager = UserManager(mainActivity)
+
+                dateManager.saveNickname(editTextNickname.text.toString())
+
                 mainActivity.supportFragmentManager.beginTransaction()
                     .replace(R.id.fragmentContainerView_main, OnboardingTypeFragment())
                     .addToBackStack(null)
