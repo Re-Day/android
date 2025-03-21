@@ -81,6 +81,10 @@ class OnboardingFirstDayFragment : Fragment() {
                         .addToBackStack(null)
                         .commit()
                 } else {
+                    mainActivity.supportFragmentManager.beginTransaction()
+                        .replace(R.id.fragmentContainerView_main, HomeFragment())
+                        .addToBackStack(null)
+                        .commit()
                 }
             }
         }

@@ -74,6 +74,11 @@ class OnboardingReDayFragment : Fragment() {
                 val dateManager = DateManager(mainActivity)
 
                 dateManager.saveDate("re_day", editTextDate.text.toString())
+
+                mainActivity.supportFragmentManager.beginTransaction()
+                    .replace(R.id.fragmentContainerView_main, HomeFragment())
+                    .addToBackStack(null)
+                    .commit()
             }
         }
         return binding.root
