@@ -83,4 +83,18 @@ class OnboardingBrokenDayFragment : Fragment() {
         return binding.root
     }
 
+    override fun onResume() {
+        super.onResume()
+        initView()
+    }
+
+    fun initView() {
+        binding.run {
+            buttonNext.isEnabled = false
+
+            toolbar.buttonBack.setOnClickListener {
+                fragmentManager?.popBackStack()
+            }
+        }
+    }
 }

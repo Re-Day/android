@@ -70,5 +70,4 @@ class OnboardingNicknameFragment : Fragment() {
             }
         }
     }
-
 }
